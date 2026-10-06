@@ -78,6 +78,7 @@
 #
 #    #Como se passa aspas simples, como um literal em uma linha de comando?
 #    #Utilizando a barra invertida antes do caractere de aspas simples
+#      #I dont't like contractions inside shell scripts
 #      #echo I dont\'t like contractions inside shell scripts
 #
 #
