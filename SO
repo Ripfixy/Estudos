@@ -1,0 +1,100 @@
+#Shell Script
+#
+#Para ser mais facil de executar todo script sem necessitar digitar ./[command], criar o script em "/usr/local/bin"
+#Mas ainda assim, dar ao script a permissão de execução usando: "sudo chmod +x /usr/local/bin/[nome do script]"
+#Pode-se mudar o nome do script nem a necessidade do .sh no final no nome do script com: "sudo mv [oldscriptname] [newname]"
+#Scripts podem ser armazenados em qualquer lugar do sistema, mas, ainda é mais conveniente coloca-los em "/usr/local/bin"
+
+#Para criar um script se usa o comando "nano [nomedoscript]", podendo armazena-lo em qualquer lugar do sistema, lembrando-se de usar "sudo" quando necessário, dependendo do diretório
+#
+#Não sendo necessário deixar uma linha entre eles, apenas não os colocando na mesma linha
+
+#Introdução
+#
+#O Shell é uma das partes mais importantes de um sistema Unix
+#É um programa interativo que serve como interpretador de linha de comando, servindo também como um ambiente de programação
+#É possível dividir pequenas tarefas comuns em pequenos componentes e usar o shell para administrá-las
+#Bourne Again SHell
+#Na realidade, diferentes partes dos sistema são shell scripts
+#Existem vários shells Unix distintos, porém todos derivam muitos recursos do Bourne Shell (/bin/sh)
+#O Linux utiliza uma versão melhorada do Bourne Shell, chamada BASH ("Bourne Again SHell")
+#Se podemos executar comandos no Shell, logo, podemos criar shell scripts
+#A primeira linha do arquivo do script deve começar com "!#/bin/bash"
+# "#!" é chamado de shebang (ou hashbang), qualquer comando que será executado pelo shell deverá ser listado após esta linha
+# |>Ex: #!/bin/bash
+#       #Exibe uma mensagem e executa "ls"
+#       echo Meu primeiro shell script
+#       ls
+#
+#Pontos Fortes
+#
+#    #Manipula comandos e arquivos com relativa facilidade
+#    #Simplificam e automatizam tarefas
+#
+#Pontos Fracos
+#
+#    #Não é recomendado para manipulação de strings
+#    #Processamentos aritméticos repetitivo, acesso a BD complexos, funções e estruturas de controle complexas
+#
+#Uso de Aspas e literais
+#
+#    #Quando usar aspas e outros sinais de pontuação
+#    #Exibir a string $100
+#      #echo $100
+#    #O que será exibido?
+#      #00
+#
+#    #$1 é uma variável de shell
+#    #Então colocaremos aspas duplas
+#      #echo "$100"
+#    #O que irá imprimir?
+#      #00
+#    #Então usaremos aspas simples
+#      #echo '$100'
+#
+#Literais
+#
+#    #Ao utilizar aspas, está se criando um literal, uma string que será passada ao shell sem alterações
+#    #Além do "$", existem caracteres, como o "*"e o ";" que podem ser usados em um comando grep, sem com que o shell expanda
+#    #Supondo que queremos procurar todas as entradas em /etc/passwd, que correspondam a expressão "ro*t"
+#    #O que devemos executar?
+#      #grep ro*t /etc/passwd
+#
+#Aspas Simples
+#
+#    #String intocável pelo shell
+#    #Todos os caracteres entre aspas simples, incluso espaços, compões em um único parâmetro
+#      #echo "Valor: R$2,00" ---> Irá mostrar "Valor: R,00" no terminal
+#      #echo 'Valor: R$2,00' ---> Irá mostrar "Valor: R$2,00" no terminal
+#
+#Aspas Duplas
+#
+#    #Função parecida com a das aspas simples, porém o shell expande quaquer variável que apareça entre elas
+#      #echo "Não existe * no meu caminho: $PATH" ---> Mostra no terminal a mensagem digitada e o caminho
+#      #touch arquivo ${RANDOM}.txt ---> Cria dois arquivos, um chamado "arquivo" e outro chamado "12345.txt", pois ${RANDOM} cria um arquivo ou diretório com nome numérico aleatório
+#      #touch "arquivos ${RANDOM}.txt" ---> Cria apenas um arquivo chamado " 'arquivo 27789.txt' ", pois toda parte após o touch está entre aspas duplas, os números também são aleatórios
+#
+#Aspas Simples Literais
+#
+#    #Como se passa aspas simples, como um literal em uma linha de comando?
+#    #Utilizando a barra invertida antes do caractere de aspas simples
+#      #echo I dont\'t like contractions inside shell scripts
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
