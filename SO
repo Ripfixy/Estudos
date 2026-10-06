@@ -21,10 +21,10 @@
 #Se podemos executar comandos no Shell, logo, podemos criar shell scripts
 #A primeira linha do arquivo do script deve começar com "!#/bin/bash"
 # "#!" é chamado de shebang (ou hashbang), qualquer comando que será executado pelo shell deverá ser listado após esta linha
-# |>Ex: #!/bin/bash
-#       #Exibe uma mensagem e executa "ls"
-#       echo Meu primeiro shell script
-#       ls
+#    #Ex: #!/bin/bash
+#      #Exibe uma mensagem e executa "ls"
+#      echo Meu primeiro shell script
+#      ls
 #
 #Pontos Fortes
 #
@@ -80,19 +80,19 @@
 #    #Utilizando a barra invertida antes do caractere de aspas simples
 #      #I dont't like contractions inside shell scripts
 #      #echo I dont\'t like contractions inside shell scripts
+#    #'dont\'t - Erro de sintaxe
+#    #Caso tenho que colocar uma string inteira entre aspas simples (sem substituições)
+#      #Muda as aspas simples de ' para '\"
+#      #Coloque a string toda entre aspas simples
+#        #this isn't a forward slash:\
+#        #echo 'this isn'\'' a forward slash:\'
+#Variável de Ambiente
 #
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
+#    #O shell pode armazenar variáveis temporárias
+#    #Variáveis shell
+#    #String texto
+#    #Atribuição
+#      #STUFF=BLAH
 #
 #
 #
